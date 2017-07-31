@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Sandbox</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<style type="text/css" media="screen">
+</style>
+<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="js/jquery.trace.js"></script>
+<script type="text/javascript">
+$(function() {
+   $('#traceMe').click(function() {
+      console.group("Trace");
+      $.trace("div p a[href$='.zip'][title^='Elijah']");
+      console.groupEnd();
+      
+      
+   });
+});
+</script>
+</head>
+<body>
+   <div>
+      <p><a href="http://elijahmanor.com/elijah1.gif">elijah1.gif w/ no title</a></p>
+      <p><a href="http://elijahmanor.com/elijah2.zip">elijah2.zip w/ no title</a></p>
+      <p><a href="http://elijahmanor.com/elijah3.zip" title="Elijah, Pick Me! 1 of 3">elijah3.zip w/ pretended Elijah title</a></p>
+      <p><a href="http://elijahmanor.com/elijah4.zip" title="Elijah, Pick Me! 2 of 3">elijah4.zip w/ pretended Elijah title</a></p>
+      <p><a href="http://elijahmanor.com/elijah5.zip" title="Pick Me Elijah!">elijah5.zip w/ Elijah in middle of title</a></p>
+      <p><a href="http://elijahmanor.com/elijah6.zip" title="Elijah, Pick Me! 3 of 3">elijah6.zip w/ pretended Elijah title</a></p>
+   </div>
+   <div><a href="http://elijahmanor.com/elijah7.zip">Div 2</a></div>
+   <div><a href="http://elijahmanor.com/elijah8.zip">Div 3</a></div>
+   <p><button id="traceMe">$.trace("div p a[href$='.zip'][title^='Elijah']")</button></p>
+   <a href="http://jsbin.com/ofumi/edit" target="_blank">View, Run, &amp; Edit Code</a>
+</body>
+</html>

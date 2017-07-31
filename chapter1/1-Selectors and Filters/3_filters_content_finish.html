@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>filters: content,visibility | jQuery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<script language="javascript" src="jquery-3.0.0.min.js"></script>
+</head>
+
+<style>
+.s1{
+	color:#009;
+}
+.s2{
+	color:#900;
+}
+.s3{
+	text-decoration:line-through;
+}
+.s4{
+	display:none;
+}
+</style>
+
+<body>
+    <p class="s1"> параграф №0</p>
+    <p id="middle" class="s2 s3"> параграф №1</p>
+    <p > параграф №2</p>
+        
+    <div id="divBlock">
+        <span id="first" class="s1"> 
+        	<p>текст в первом блоке SPAN</p>
+            <span class="s2"> еще один блок внутри </span>
+            еще немного текста в первом блоке SPAN
+        </span><br />
+        <a href="#">ссылка</a><br />
+        
+        <span class="s2"> текст во втором блоке SPAN</span><br />
+    </div>
+</body>
+
+<script language="javascript">
+	$(document).ready(function(){
+							   		$('span:contains("SPAN")').css('border','3px solid black');
+									//$(':empty').css('border','3px solid black');
+									//$('#divBlock:has(p)').css('border','3px solid black');
+									//$('body *:parent').css('border','3px solid black');
+									//$('body *:parent:not(p)').css('border','3px solid black');
+									//$(':visible').css('border','3px solid black');
+									
+									//$(':hidden').css('border','3px solid black');
+							    });
+</script>
+</html>

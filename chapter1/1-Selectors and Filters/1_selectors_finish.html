@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>selectors | jQuery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<script language="javascript" src="../../source/js/jquery-1.3.2.min.js"></script>
+</head>
+
+<style>
+.s1{
+	color:#009;
+}
+.s2{
+	color:#900;
+}
+.s3{
+	text-decoration:line-through;
+}
+</style>
+
+<body>
+    <p class="s1"> параграф №0</p>
+    <p id="middle" class="s2 s3"> параграф №1</p>
+    <span> SPAN </span>
+    <p > параграф №2</p>
+        
+    <div id="divBlock">
+        <span id="first" class="s1"> 
+        	текст в первом блоке SPAN
+            <span class="s2"> еще один блок внутри </span>
+            еще немного текста в первом блоке SPAN
+        </span><br />
+        
+        <a href="#">ссылка</a><br />
+        
+        <span class="s2"> текст во втором блоке SPAN</span><br />
+    </div>
+</body>
+
+<script language="javascript">
+	$(document).ready(function(){
+									//$('p').css('border','3px solid black');
+									//$('p.s1').css('border','3px solid black');
+									//$('*.s1').css('border','3px solid black');
+									
+									//$('#divBlock span').css('border','3px solid black');
+									//$('#divBlock > span').css('border','3px solid black');
+									//$('#middle + p').css('border','3px solid black');
+									//$('#middle + span').css('border','3px solid black');
+									//$('#middle ~ *').css('border','3px solid black');
+									
+									//$('.s2.s3').css('border','3px solid black');
+							   		$('.s2,.s3').css('border','3px solid black');
+							    });
+</script>
+</html>

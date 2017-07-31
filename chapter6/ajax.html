@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="RU">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>AJAX | jq debugging</title>
+	<meta name="author" content="Denis Homich">
+	<style>
+		button{
+			margin: 20px;
+			border: 0px;
+			font-size: 30px;
+			font-weight: bold;
+			color: #FFF;
+			height: 50px;
+			min-width: 100px;
+		}
+		
+		.post{
+			background-color: #006699;
+		}
+		
+		.get{
+			background-color: #CC4455;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<button type="button" class="get">GET</button>
+		<button type="button" class="post">POST</button>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		
+			var dataToSend = {
+				"foo" : "bar",
+				"baz" : "qux"
+			};
+			
+			$('button.get').click(function(){
+				$.get("handler.php", dataToSend, function(){ console.log("обращение к серверу завершено"); });
+			});
+			
+			$('button.post').click(function(){
+				$.post("handler.php", dataToSend, function(){ console.log("обращение к серверу завершено"); });
+			});
+		});
+	</script>
+</body>
+</html>

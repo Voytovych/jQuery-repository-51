@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>effects: hiding | jQuery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<script language="javascript" src="jquery-3.0.0.min.js"></script>
+</head>
+
+<style>
+.s1{
+	background-color:#FEEB81;
+}
+.s2{
+	background-color:#F60;
+}
+.s3{
+	background-color:#F00;
+}
+.square{
+	height: 200px;
+	width: 200px;
+	float: left;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid black;
+}
+.btn{
+	float: left;
+	width: 70px;
+	padding: 10px;
+	margin-right: 85px;
+	margin-left: 85px;
+}
+.btn1{
+	clear: left;
+}
+</style>
+
+<body>
+	<div id="first" class="s1 square" > BIG <br /> YELLOW <br /> DIV </div>
+    
+    <br />
+    <button id="show_btn" class="btn btn1" > toggle </button>
+    
+    <!--<br />
+    <button id="hide_btn" class="btn btn1" > hide </button>-->
+</body>
+
+<script language="javascript">
+	$(document).ready(function(){
+							   		$('#show_btn').click(showElement);							
+									$('#hide_btn').click(hideElement);
+							    });
+	
+	function showElement()
+	{
+		//$('#first').show();
+		//$('#first').show('slow',function(){alert('the div is visible');});
+		$('#first').toggle('slow',function(){alert('the div is visible');});
+	}
+	
+	function hideElement()
+	{
+		//$('#first').hide();
+		$('#first').hide(5000);
+	}
+</script>
+</html>

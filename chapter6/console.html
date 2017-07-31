@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="RU">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>LOGGING | jq debugging</title>
+	<meta name="author" content="Denis Homich">
+	<style>
+		#log-api,#util-api{
+			float: left;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="log-api">
+		<h1>Console API</h1>
+		<ul>
+			<li>log()</li>
+			<li>debug()</li>
+			<li>info()</li>
+			<li>warn()</li>
+			<li>error()</li>
+			<li>assert()</li>
+		</ul>
+	</div>
+	
+	<div id="util-api">
+		<h1>&nbsp;</h1>
+		<ul>
+			<li>count()</li>
+			<li>trace()</li>
+			<li>group() / groupEnd()</li>
+			<li>time() / timeEnd()</li>
+			<li>profile() / profileEnd</li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			console.profile("JQ test");
+			$("#log-api").find("li:last");
+			console.profileEnd();
+		});
+	</script>
+</body>
+</html>

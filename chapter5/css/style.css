@@ -1,0 +1,75 @@
+body{
+	background-color: #FFF;
+}
+
+h1{
+	font-size: 200%;
+}
+
+p{
+	margin: 20px 0px 20px 0px;
+}
+
+.column{
+	height: 400px;
+	margin: 0px;
+	color: #000000;
+}
+
+.s-block{
+	clear: both;
+}
+
+#container{
+	width: 600px;
+	margin: 0 auto;
+}
+
+form{
+	margin-left: 25px;
+}
+
+input, textarea{
+	width: 250px;
+	border: 1px solid #333;
+}
+
+textarea{
+	height: 75px;
+}
+
+.btn, button{
+	color: #FFF;
+	font-weight: bold;
+	background: #333;
+}
+.btn{	
+	float: left;
+	margin-right: 3px;
+}
+button{
+	font-size: 300%;
+	border: 1px solid #333;
+	margin-top: 20px;
+}
+
+.btn:hover, button:hover{
+	color: rgb(252,212,100);
+}
+
+#load-indicator{
+	display: none;
+	margin: 0;
+}
+
+#c-column { 
+	width: 300px;
+	margin: 0 auto;
+}
+
+#load-container{
+	clear: both;
+	margin: 10px;
+	text-align: center;
+}
+

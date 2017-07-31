@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>form-filters | jQuery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<script language="javascript" src="jquery-3.0.0.min.js"></script>
+</head>
+
+<style>
+.s1{
+	color:#009;
+}
+.s2{
+	color:#900;
+}
+.s3{
+	text-decoration:line-through;
+}
+</style>
+
+<body>
+
+	<form action="#" method="get" name="form1">
+    	<!--текстовые элементы-->
+    	login:<br />
+        <input name="login" type="text" size="35" /><br />
+        
+        password:<br />
+        <input name="password" type="password" size="35" />
+        <br />
+        <br />
+        
+      	text: <br />
+     	 <textarea name="text" cols="45" rows="5">
+        </textarea>
+        <br />
+        <br />
+        
+        <!--чекбоксы-->
+        check1:
+        <input name="check_1" type="checkbox" value="" />
+        <br />
+        check2:
+        <input name="check_2" type="checkbox" value="" />
+        <br />
+        check3:
+		<input name="check_3" type="checkbox" value="" />
+        <br />
+        <br />
+        
+        <!--радио кнопки-->
+        radio1:
+        <input name="radio_1" type="radio" value="" />
+        <br />
+        radio2:
+		<input name="radio_2" type="radio" value="" disabled="disabled" />
+        <br />
+        <br />
+        
+        <!--кнопки-->
+        button1:
+        <input name="button1" type="submit" value="submit" />
+        <br />
+        button2:
+		<input name="button2" type="reset" value="reset" />
+        <br />
+        button3:
+		<input name="button3" type="button" value="button" disabled="disabled" />
+        <br />
+        <br />
+        
+        <!--список-->
+        list:
+        <select name="list" >
+        	<option>option 1</option>
+            <option>option 2</option>
+            <option>option 3</option>
+        </select>
+        <br />
+        <br />
+        
+        <!--скрытые элементы-->
+        <input name="hidden1" type="hidden" value="this is a value of a hidden element" />
+        <input name="hidden1" type="hidden" value="this is a value of a hidden element" /> 
+    </form>
+</body>
+
+<script language="javascript">
+	$(document).ready(function(){
+									//$(':input').css('border','3px solid black');
+									//alert($(':input').length);
+							   		
+									//$(':text').css('border','3px solid black');
+									
+									//alert($(':checked').length);
+									//alert($(':checkbox:checked').length);
+									
+									//alert($(':disabled').length);
+							    });
+</script>
+</html>

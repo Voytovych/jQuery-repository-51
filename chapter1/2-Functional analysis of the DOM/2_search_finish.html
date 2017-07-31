@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>traversing: search | jQuery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<script language="javascript" src="../../source/js/jquery-1.3.2.min.js"></script>
+</head>
+
+<style>
+.s1{
+	color:#009;
+}
+.s2{
+	color:#900;
+}
+.s3{
+	text-decoration:line-through;
+}
+.s4{
+	background-color:#FEEB81;
+}
+</style>
+
+<body>
+    <p class="s1"> параграф №0</p>
+    <p id="middle" class="s2 s3"> параграф №1</p>
+    <p > <span id="insideSpan">параграф №2</span></p>
+    <p > параграф №3</p>
+    <p > параграф №4</p>
+       
+    <div id="divBlock">
+        <span id="first" class="s1"> 
+        	текст в первом блоке SPAN
+            <span class="s2"> еще один блок внутри </span>
+            еще немного текста в первом блоке SPAN
+        </span><br />
+        
+        <a href="http://google.com">ссылка</a><br />
+        
+        <span class="s2"> текст во втором блоке SPAN</span><br />
+    </div>
+</body>
+
+<script language="javascript">
+	$(document).ready(function(){
+									//$('#divBlock').children().css('border','3px solid black');
+									//$('#divBlock').children('div').css('border','3px solid black');
+									//$('#divBlock').children('a').css('border','3px solid black');
+									
+									//$('body > *').parent().css('border','3px solid black');
+									//$('body > *').parents().css('border','3px solid black');
+									//$('#insideSpan,#divBlock').parent().css('border','3px solid black');
+							   		//$('#insideSpan,#divBlock').parents().css('border','3px solid black');
+									
+									//$('#middle').next().css('border','3px solid black');
+									//$('#middle').nextAll().css('border','3px solid black');
+									$('#middle').siblings().css('border','3px solid black');
+							    });
+</script>
+</html>

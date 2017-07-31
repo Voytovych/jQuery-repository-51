@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>effects: fading | jQuery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<script language="javascript" src="jquery-3.0.0.min.js"></script>
+</head>
+
+<style>
+.s1{
+	background-color:#FEEB81;
+}
+.s2{
+	background-color:#F60;
+}
+.s3{
+	background-color:#F00;
+}
+.square{
+	height: 200px;
+	width: 200px;
+	float: left;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid black;
+}
+.btn{
+	float: left;
+	width: 70px;
+	padding: 10px;
+	margin-right: 85px;
+	margin-left: 85px;
+}
+.btn1{
+	clear: left;
+}
+</style>
+
+<body>
+	<div id="first" class="s1 square" > BIG <br /> YELLOW <br /> DIV </div>
+    
+    <br />
+    <button id="btn1" class="btn btn1" > fade IN </button>
+    
+    <br />
+    <button id="btn2" class="btn btn1" > fade OUT </button>
+    
+    <br />
+    <button id="btn3" class="btn btn1" > fade to 0.5 </button>
+    
+    <br />
+    <button id="btn4" class="btn btn1" > fade to 0.2 </button>
+    
+</body>
+
+<script language="javascript">
+	$(document).ready(function(){
+							   		$('#btn1').click(showElement);							
+									$('#btn2').click(hideElement);
+									$('#btn3').click(function(){$('#first').fadeTo('slow',0.5,function(){alert('div\'s opacity 50%');});});
+									$('#btn4').click(function(){$('#first').fadeTo('slow',0.2,function(){alert('div\'s opacity 20%');});});
+							    });
+	
+	function showElement()
+	{
+		$('#first').fadeIn(3000);
+	}
+	
+	function hideElement()
+	{
+		$('#first').fadeOut(3000);
+	}
+</script>
+</html>

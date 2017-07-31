@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>value | jQuery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<script language="javascript" src="jquery-3.0.0.min.js"></script>
+</head>
+
+<style>
+.s1{
+	color:#009;
+}
+.s2{
+	color:#900;
+}
+.s3{
+	text-decoration:line-through;
+}
+</style>
+
+<body>
+
+	<form action="#" method="get" name="form1" id="form">
+    	<!--текстовые элементы-->
+    	login:<br />
+        <input name="login" type="text" size="35" /><br />
+        
+        password:<br />
+        <input name="password" type="password" size="35" />
+        <br />
+        <br />
+        
+      	text: <br />
+     	 <textarea name="text" cols="45" rows="5">
+there is some text here 
+        </textarea>
+        <br />
+        <br />
+        
+        <!--чекбоксы-->
+        check1:
+        <input name="check_1" type="checkbox" value="check_1" />
+        <br />
+        check2:
+        <input name="check_2" type="checkbox" value="check_2" />
+        <br />
+        check3:
+		<input name="check_3" type="checkbox" value="check_3" />
+        <br />
+        <br />
+        
+        <!--радио кнопки-->
+        <label>
+		    <input type="radio" name="radioGroup" value="r1" id="radioGroup_0" />
+		    radio 1</label>
+		  <br />
+		  <label>
+		    <input type="radio" name="radioGroup" value="r2" id="radioGroup_1" />
+		    radio 2</label>
+		  <br />
+		  <label>
+		    <input type="radio" name="radioGroup" value="r3" id="radioGroup_2" />
+		    radio 3
+        </label>
+		  
+	    <br />
+        <br />
+        
+        <!--кнопки-->
+        button1:
+        <input name="button1" type="submit" value="submit" />
+        <br />
+        button2:
+		<input name="button2" type="reset" value="reset" />
+        <br />
+        button3:
+		<input name="button3" type="button" value="button" />
+        <br />
+        <br />
+        
+        <!--список-->
+        list:
+        <select name="list" >
+        	<option>option 1</option>
+            <option>option 2</option>
+            <option>option 3</option>
+        </select>
+        <br />
+        <br />
+        
+        <!--скрытые элементы-->
+        <input name="hidden1" type="hidden" value="this is a value of a hidden element" />
+        <input name="hidden1" type="hidden" value="this is a value of a hidden element" /> 
+    </form>
+</body>
+
+<script language="javascript">
+	$(document).ready(function(){
+							   		//$('input:text').val('some text');
+									//alert($('textarea').val());
+									//$('input:radio,input:checkbox').val(['check_3','check_2','r1']);
+							    });
+</script>
+</html>
